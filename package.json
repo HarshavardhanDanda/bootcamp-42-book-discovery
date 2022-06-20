@@ -1,7 +1,12 @@
 {
-  "name": "bookdiscovery",
+  "name": "bootcamp-42-book-discovery",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "dependencies": {
     "@aws-amplify/ui-react": "^2.19.1",
     "@mui/styles": "^5.8.3",
@@ -19,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/ui-components -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/preset-react": "^7.17.12"
   }
 }
